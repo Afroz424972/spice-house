@@ -572,22 +572,20 @@
                 dob: inputs[2].value
            };
             
-           const GOOGLE_SCRIPT_URL =
-      "https://script.google.com/macros/s/AKfycbwSAiX38xv6JH7ASROTbQ4h-hej8EIZTdxb2WabpkH4GwgCVU93a2-KR4wXDOx8gMVATQ/exec";
+           const GOOGLE_SCRIPT_URL =                                                          "https://script.google.com/macros/s/AKfycbwSAiX38xv6JH7ASROTbQ4h-hej8EIZTdxb2WabpkH4GwgCVU93a2-KR4wXDOx8gMVATQ/exec";
 
             try {
-                await fetch(GOOGLE_SCRIPT_URL,
-         {
+                await fetch(GOOGLE_SCRIPT_URL, {
                     method: 'POST',
                     body: JSON.stringify(bookingData)
                 });
                 
-                alert('Thank you! Your table reservation has been received.');
+                alert("Thank you! Your table reservation has been received.");
                 bookingForm.reset();
 
 
             } catch (error) {
-                alert('Something went wrong. Please try again.');
+                alert("Something went wrong. Please try again.");
                 console.error(error);
             }
         });    
